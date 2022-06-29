@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project - Coderhouse</title>
+  <link href="dist/output.css" rel="stylesheet">
+  <link rel="icon" href="src/icon.jpg" type="img/png">
+</head>
+
+<body>
+
+  <section id="welcome">
+
+    <div class="relative flex min-h-screen flex-col items-center justify-center bg-red-100 p-8 sm:p-12">
+      <div class="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white p-14">
+        <div class="flex flex-col items-center">
+          <span class="-rotate-1 rounded-lg bg-red-300 py-px px-2 text-base text-red-800">😈 Diccionario del
+            Diablo 😈</span>
+          <h6 class="block max-w-2xl mt-4 text-xl dark:text-gray-800">✨¡Hola! Estás viendo la recopilación satírica de
+            definiciones corrosivas escrito de 1881 a 1906 por Ambrose Bierce.✨</h6>
+          <p class="mb-8 mt-4">¿Puedes darnos tu nombre?</p>
+          <div class="mx-auto mt-4 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:gap-0 space-x-4">
+            <input type="text" id="username" placeholder="Ingresa tu nombre" class="input w-full max-w-xs" />
+            <button id="saveBtn" class="btn btn-active btn-primary">Comenzar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="hidden" id="searchsection">
+
+    <div class="rounded-md border-2 border-gray-100 bg-white p-10">
+      <div class="flex flex-col items-center">
+        <h2 class="text-lg">✨Hola✨</h2>
+        <h3 class="text-2xl" id="usernameOut"></h3>
+
+        <input type="text" id="inputSearch" placeholder="Buscar" class="mt-4 input w-full max-w-xs" onkeypress="return (event.charCode > 64 && 
+        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" />
+        <div class="mt-4 flex items-center gap-3 sm:flex-row sm:gap-0 space-x-4">
+          <button id="searchBtn" class="btn btn-primary">Ver significado</button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+    <div class="container mx-auto flex justify-center px-4 my-10 ">
+
+      <div class="m-8">
+        <h3 class="font-semibold text-pink-900">Tu búsqueda</h3>
+        <div id="card">
+          <div id="gif"></div>
+        </div>
+      </div>
+
+      <div class="m-8">
+        <h3 class="font-semibold text-pink-900">Busquedas recientes</h3>
+        <div id="listW"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="src/scripts.js"></script>
+
+</body>
+
+</html>
