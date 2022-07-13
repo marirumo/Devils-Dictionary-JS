@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //fetch a JSON
 function fetchData() {
-    fetch('.data/dictionary.json')
+    fetch('data/dictionary.json')
         .then((response) => response.json())
         .then((json) => localStorage.setItem('myResponse', JSON.stringify(json)))
         .catch(() => alert('intente de nuevo'))
@@ -38,7 +38,7 @@ datalist.id = 'datalist';
 document.body.appendChild(datalist);
 
 //Iteramos en localstorage de JSON para sumar a datalist 
-let dataJson = JSON.parse(localStorage.getItem('myResponse'));
+let dataJson = JSON.parse(localStorage.getItem('myResponse')) || [];
 let listofWords = dataJson.map(({ word }) => word)
 listofWords.forEach(function (dataJson) {
     let option = document.createElement('option')
